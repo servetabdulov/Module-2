@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@media screen and (min-width: 800px) {
+.list_item{
+    font-size: 1.382vw;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.39vw;
+    font-family: 'Roboto';
+    font-style: normal;
+    margin: .4vw 0;
+}
+@media screen and (min-width: 1152px) {
     *{
         margin: 0;
         padding: 0;
@@ -23,24 +35,151 @@
     .yellow{
         background-color: #FFDC40;
         width: 29vw;
-        height: 2.431vw;
+        height: 2.531vw;
         border-top-left-radius: 0.8vw;
         border-top-right-radius: 0.8vw;
     }
     .headToDoList{
-        width: 100px;
+        line-height: 2.951vw;
+        font-size: 2.431vw;
+        font-weight: 900;
+        font-family: 'Roboto';
+        margin-top: 1.128vw;
+        color: black;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .downIcon{
+        opacity: 0.233232;
+        margin-left: 21.459vw;
+        margin-bottom: -0.867vw;
+        padding-top: 0.959vw; 
+        transition: opacity .3s;
+    }
+    .downIcon:hover{
+        opacity: 2;
+    }
+    .downIcon img{
+        width: 2.17vw;
+        height: 1.302vw;
+        cursor: pointer;
+    }
+    .upIcon{
+        display: none;
+        opacity: 0.233232;
+        margin-left: 24.17vw;
+        margin-bottom: -0.367vw;
+        padding-top: 0.7vw; 
+        transition: opacity 0.4s;
+    }
+    .upIcon:hover{
+        opacity: 2;
+    }
+    .upIcon img {
+        width: 2.17vw;
+        height: 1.302vw;
+        cursor: pointer;
+    }
+    .toDoList {
+        width: 24.826vw;
+        height: 3.472vw;
+        border: 0.087vw solid #c4c4c4;
+        border-radius: 0.5vw;
+        margin: 1.736vw auto;
+    }
+    .listText{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;   
+    }
+    input{
+        border: none;
+        font-family: 'Roboto';
+        width: 16.493vw;
+        font-size: 1.38vw;
+        outline: none;
+        padding: 0.770vw 0;
+        line-height: 1.389vw;
+    }
+    .iconContainer{
+        margin-right: 19px;
+    }
+    .close{
+        width: 1.594vw;
+        height: 1.594vw;
+        margin-top: 0.588vw;
+        margin-right: 0.695vw;
+        color: #c4c4c4;
+        opacity: .8;
+        cursor: pointer;
+        transition: opacity .2s;
+        border-radius: 50%;
+        border: 0.2vw solid #c4c4c4;
+    }
+    .close:hover{
+        opacity: 2;
+        background-color: #833AE0;
+    }
+    button{
+        background-color: #833AE0;
+        width: 13.021vw;
+        height: 3.646vw;
+        border-radius: 6.164vw;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        outline: none;
+    }
+    button:hover{
+        background-color: #681fc7;
+    }
+    .buttonMain{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.2vw;
+    }
+    button .plus{
+        display: inline-block;
+        width: 3.646vw;
+        height: 3.646vw;
+        background: #9953F1;
+        border-radius: 6.164vw; 
+        color: #fff;
+        margin-left: -9.375vw;
+        font-size: 1.18vw;
+        transition: background-color 0.3s;
+    }
+    button:hover .plus{
+        background-color: #9042f0;
+    }
+    .plus p{
+        margin-top: 1.081vw;
+        font-size: 1.389vw;
+    }
+    button .add{
+        width: 11.198vw;
+        height: 3.646vw;     
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.215vw;
+        line-height: 1.389vw;
+        display: flex;
+        align-items: center;
+        text-align: center;  
+        color: #FFFFFF; 
+        margin-top: -3.646vw;
+        padding-left: 5.611vw;
+         font-family: 'Roboto';
+    }
+    .listMain{
+        display: flex;
+        flex-direction: column;
+        width: 19.1vw;
+    }
+      
+    .list{
+        display: flex;
+    }
+    .list_item_words{
+        font-size: 1.18vw;
+    }
 }
