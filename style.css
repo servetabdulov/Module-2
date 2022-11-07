@@ -80,9 +80,8 @@
     }
     .toDoList {
         width: 24.826vw;
-        height: 3.472vw;
         border: 0.087vw solid #c4c4c4;
-        border-radius: 0.5vw;
+        border-radius: 0.868vw;
         margin: 1.736vw auto;
     }
     .listText{
@@ -97,16 +96,13 @@
         width: 16.493vw;
         font-size: 1.38vw;
         outline: none;
-        padding: 0.770vw 0;
+        padding: 1.277vw 0;
         line-height: 1.389vw;
-    }
-    .iconContainer{
-        margin-right: 19px;
     }
     .close{
         width: 1.594vw;
         height: 1.594vw;
-        margin-top: 0.588vw;
+        margin-top: 1vw;
         margin-right: 0.695vw;
         color: #c4c4c4;
         opacity: .8;
@@ -170,7 +166,7 @@
         padding-left: 5.611vw;
          font-family: 'Roboto';
     }
-    .listMain{
+    #listMain{
         display: flex;
         flex-direction: column;
         width: 19.1vw;
