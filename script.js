@@ -1,61 +1,47 @@
-let listMain = document.querySelector('#listMain');
-let input = document.querySelector('#inputMain');
 let toDoList = document.querySelector('.toDoList');
+toDoList.addEventListener('keyup', newItem);
+
 let bttn = document.querySelector('.buttonMain');
+bttn.addEventListener('click', newInput);
+
 let downIcon = document.querySelector('.downIcon');
+downIcon.addEventListener('click', sortArrayFunc);
+
 let upIcon = document.querySelector('.upIcon');
+upIcon.addEventListener('click', sortArrayReverseFunction);
 
-
-
-
-  toDoList.addEventListener('keyup', addNewItem);
-  bttn.addEventListener('click', addNewInput);
-  downIcon.addEventListener('click', sortArrayFunc);
-  upIcon.addEventListener('click', sortArrayReverseFunc);
-
-
+let input = document.querySelector('#inputMain');
 document.getElementById("inputMain").focus();
-let list = document.querySelector('.list');
-function addNewItem(a) {
 
-  if (a.keyCode == 13 && list.style.display != 'none') {
-      // list create olur
+let list = document.querySelector('.list');
+
+function newItem(enter) {
+
+  if (enter.keyCode == 13 && list.style.display != 'none') {
       let line = document.createElement('li');
       line.className = 'list_item item';
-      line.setAttribute('draggable', true);
+      line.setAttribute('dragElement', true);
       line.innerHTML = `${input.value}<ion-icon name="close-outline" class="close"></ion-icon>`;
 
-      //list add olur
+      //Add etmek
+      let listMain = document.querySelector('#listMain');
       listMain.appendChild(line);
 
-      //clear input 
-      input.value = "";
-
-      //first style
+      input.value = '';
       list.style.display = 'none';
       toDoList.style.paddingBottom = " 0.536vw";
       console.log(list.style.display);
-
-      deleteItem();
-      //delete  funksiyasi
-
-      //drag item funksiyası
-      dragAreaFunc();
-     
-     
-      if (listMain.children.length >= 4) {
-        toDoList.scrollTop = toDoList.scrollHeight;
-      }
- //scroll yaradılması
       
-    
+      //delete
+      deleteItem();
+
+      //drag function
+      dragAreaFunc();
   }
 }
 
-function addNewInput(e) {
+function newInput(e) {
   list.style.display = 'flex';
-  // downIcon.style.opacity = '.3';
-
   document.getElementById("inputMain").focus();
 }
 
@@ -79,49 +65,42 @@ function deleteItem() {
 }
 let sortArray = [];
 function sortArrayFunc() {
-  // downIcon.style.opacity = '1';
-  let li = document.querySelectorAll('li');
+  let listLi = document.querySelectorAll('li');
   sortArray = [];
-  li.forEach(item => {
+  listLi.forEach(item => {
     sortArray.push(item.innerHTML);
   })
-
-  //sorting massiv
   sortArray.sort();
 
-  for (let i = 0; i < (li.length); i++) {
-    li[i].innerHTML = sortArray[i];
+  for (let i = 0; i < (listLi.length); i++) {
+    listLi[i].innerHTML = sortArray[i];
   }
 
-  //delete funksiyası
+  //delete
   deleteItem();
   let upIcon = document.querySelector('.upIcon');
-downIcon.style.display='none';
-upIcon.style.display='flex';
+  downIcon.style.display='none';
+  upIcon.style.display='flex';
 
-  //drag funksiyası
+  //drag function
   dragAreaFunc();
-
 }
 
-function sortArrayReverseFunc() {
+function sortArrayReverseFunction() {
+  upIcon.style.display='none';
+  downIcon.style.display='block';
 
-upIcon.style.display='none';
-downIcon.style.display='block';
-// downIcon.style.opacity='233232';
-li=document.querySelectorAll('li');
-sortArray=[];
-li.forEach(element => {
-sortArray.push(element.innerHTML);
+  listLi=document.querySelectorAll('li');
+  sortArray=[];
+  listLi.forEach(element => {
+  sortArray.push(element.innerHTML);
 })
-//sorting massiv
 sortArray.sort().reverse();
 
-  //sorting html
-  for (let i = 0; i < (li.length) ; i++) {
-    li[i].innerHTML = sortArray[i];
+  for (let i = 0; i < (listLi.length) ; i++) {
+    listLi[i].innerHTML = sortArray[i];
   }
-  //drag funksiyası
+  //drag function
    dragAreaFunc();
 }
 
