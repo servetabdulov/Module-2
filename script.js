@@ -20,7 +20,7 @@ function newItem(enter) {
   if (enter.keyCode == 13 && list.style.display != 'none') {
       let line = document.createElement('li');
       line.className = 'list_item item';
-      line.setAttribute('dragElement', true);
+      line.setAttribute('draggable', true);
       line.innerHTML = `${input.value}<ion-icon name="close-outline" class="close"></ion-icon>`;
 
       let listMain = document.querySelector('#listMain');
@@ -29,11 +29,14 @@ function newItem(enter) {
       input.value = '';
       list.style.display = 'none';
       toDoList.style.paddingBottom = " 0.536vw";
-      console.log(list.style.display);
       
       deleteItem();
 
       dragAreaFunc();
+
+      if (listMain.children.length >= 4) {
+        toDoList.scrollTop = toDoList.scrollHeight;
+      }
   }
 }
 
@@ -60,9 +63,10 @@ function deleteItem() {
   });
 
 }
+let listLi;
 let sortArray = [];
 function sortArrayFunc() {
-  let listLi = document.querySelectorAll('li');
+  listLi = document.querySelectorAll('li');
   sortArray = [];
   listLi.forEach(item => {
     sortArray.push(item.innerHTML);
@@ -97,6 +101,9 @@ sortArray.sort().reverse();
 
   for (let i = 0; i < (listLi.length) ; i++) {
     listLi[i].innerHTML = sortArray[i];
+
+  //delete
+    deleteItem();
   }
   //drag function
    dragAreaFunc();
