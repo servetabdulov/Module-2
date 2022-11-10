@@ -5,7 +5,7 @@ let bttn = document.querySelector('.buttonMain');
 bttn.addEventListener('click', newInput);
 
 let downIcon = document.querySelector('.downIcon');
-downIcon.addEventListener('click', sortArrayFunc);
+downIcon.addEventListener('click', sortArrayFunction);
 
 let upIcon = document.querySelector('.upIcon');
 upIcon.addEventListener('click', sortArrayReverseFunction);
@@ -27,12 +27,13 @@ function newItem(enter) {
       listMain.appendChild(line);
 
       input.value = '';
+
       list.style.display = 'none';
-      toDoList.style.paddingBottom = " 0.536vw";
+      toDoList.style.paddingBottom = "0.536vw";
       
       deleteItem();
-
-      dragAreaFunc();
+      
+      dragFunction();
 
       if (listMain.children.length >= 4) {
         toDoList.scrollTop = toDoList.scrollHeight;
@@ -44,13 +45,13 @@ function newInput(e) {
   list.style.display = 'flex';
   document.getElementById("inputMain").focus();
 }
-
+//delete
 function deleteItem() {
 
   const close = document.querySelectorAll('.close');
 
   close.forEach(item => {
-    item.addEventListener('click', (e) => {
+    item.addEventListener('click', (e) =>{
       if (e.target.className.includes('close')) {
 
         e.target.parentElement.remove();
@@ -63,55 +64,52 @@ function deleteItem() {
   });
 
 }
-let listLi;
 let sortArray = [];
-function sortArrayFunc() {
-  listLi = document.querySelectorAll('li');
+//sort
+function sortArrayFunction() {
+  let li = document.querySelectorAll('li');
   sortArray = [];
-  listLi.forEach(item => {
+  li.forEach(item => {
     sortArray.push(item.innerHTML);
   })
+
   sortArray.sort();
 
-  for (let i = 0; i < (listLi.length); i++) {
-    listLi[i].innerHTML = sortArray[i];
+  for (let i = 0; i < li.length; i++) {
+    li[i].innerHTML = sortArray[i];
   }
 
-  //delete
   deleteItem();
   let upIcon = document.querySelector('.upIcon');
   downIcon.style.display='none';
   upIcon.style.display='flex';
   deleteItem();
 
-  //drag function
-  dragAreaFunc();
+  dragFunction();
 }
-
+//sort reverse
 function sortArrayReverseFunction() {
   upIcon.style.display='none';
   downIcon.style.display='block';
 
-  listLi=document.querySelectorAll('li');
+  li=document.querySelectorAll('li');
   sortArray=[];
-  listLi.forEach(element => {
+  li.forEach(element => {
   sortArray.push(element.innerHTML);
 })
 sortArray.sort().reverse();
 
-  for (let i = 0; i < (listLi.length) ; i++) {
-    listLi[i].innerHTML = sortArray[i];
+  for (let i = 0; i < li.length; i++) {
+    li[i].innerHTML = sortArray[i];
 
-  //delete
     deleteItem();
   }
-  //drag function
-   dragAreaFunc();
+  dragFunction();
 }
-
-function dragAreaFunc() {
-  const drag = document.querySelector('.wrapper');
-  new Sortable(drag, {
+//drag and drop
+function dragFunction() {
+  const dragElement = document.querySelector('.wrapper');
+  new Sortable(dragElement, {
     animation: 350
   })
 }
