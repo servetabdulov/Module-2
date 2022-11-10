@@ -106,7 +106,5 @@ sortArray.sort().reverse();
 
 function dragAreaFunc() {
   const drag = document.querySelector('.wrapper');
-  new Sortable(drag, {
-    animation: 350
-  })
+  new Sortable(drag, {animation: 350});
 }
