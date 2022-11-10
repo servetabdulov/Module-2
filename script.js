@@ -23,7 +23,6 @@ function newItem(enter) {
       line.setAttribute('dragElement', true);
       line.innerHTML = `${input.value}<ion-icon name="close-outline" class="close"></ion-icon>`;
 
-      //Add etmek
       let listMain = document.querySelector('#listMain');
       listMain.appendChild(line);
 
@@ -32,10 +31,8 @@ function newItem(enter) {
       toDoList.style.paddingBottom = " 0.536vw";
       console.log(list.style.display);
       
-      //delete
       deleteItem();
 
-      //drag function
       dragAreaFunc();
   }
 }
@@ -81,6 +78,7 @@ function sortArrayFunc() {
   let upIcon = document.querySelector('.upIcon');
   downIcon.style.display='none';
   upIcon.style.display='flex';
+  deleteItem();
 
   //drag function
   dragAreaFunc();
