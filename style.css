@@ -37,10 +37,10 @@
         color: black;
     }
     .downIcon{
-        opacity: 0.2;
         margin-left: 21.459vw;
         margin-bottom: -0.867vw;
-        padding-top: 0.959vw; 
+        padding-top: 0.959vw;
+        opacity: 0.2;
         transition: opacity .3s;
     }
     .downIcon:hover{
@@ -53,10 +53,10 @@
     }
     .upIcon{
         display: none;
-        opacity: 0.2;
         margin-left: 24.17vw;
         margin-bottom: -0.367vw;
-        padding-top: 0.7vw; 
+        padding-top: 0.7vw;
+        opacity: 0.2;
         transition: opacity 0.4s;
     }
     .upIcon:hover{
@@ -80,42 +80,48 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        flex-direction: column;   
+        flex-direction: column;
     }
     input{
         border: none;
+        outline: none;
         font-family: 'Roboto';
         width: 16.493vw;
         font-size: 1.38vw;
-        outline: none;
         padding: 1.277vw 0;
         line-height: 1.389vw;
+    }
+    #inputMain{
+        margin-left: 1.9vw;
+    }
+    .iconContainer{
+        margin-right: 2vw;
     }
     .close{
         width: 1.594vw;
         height: 1.594vw;
         margin-top: 1vw;
-        margin-right: 0.695vw;
+        margin-right: 0.69vw;
         color: #c4c4c4;
-        opacity: .8;
         cursor: pointer;
-        transition: opacity .2s;
         border-radius: 50%;
         border: 0.2vw solid #c4c4c4;
+        opacity: .8;
+        transition: opacity .2s;
     }
     .close:hover{
         opacity: 2;
         background-color: #833AE0;
     }
     button{
-        background-color: #833AE0;
         width: 13.021vw;
         height: 3.646vw;
+        background-color: #833AE0;
         border-radius: 6.164vw;
         border: none;
+        outline: none;
         cursor: pointer;
         transition: background-color 0.3s;
-        outline: none;
     }
     button:hover{
         background-color: #681fc7;
@@ -161,25 +167,24 @@
     #listMain{
         display: flex;
         flex-direction: column;
-        width: 19.1vw;
+        width: 19vw;
     }
-      
     .list{
         display: flex;
     }
     .list_item_words{
         font-size: 1.18vw;
     }
-}
-.list_item{
-    font-size: 1.382vw;
-    font-weight: 400;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 1.39vw;
-    font-family: 'Roboto';
-    font-style: normal;
-    margin: .4vw 0;
+    .list_item{
+        display: flex;
+        font-family: 'Roboto';
+        font-style: normal;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.382vw;
+        font-weight: 400;
+        line-height: 1.39vw;
+        margin: 0.6vw 0;
+    }
 }
