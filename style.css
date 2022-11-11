@@ -54,8 +54,8 @@
     .upIcon{
         display: none;
         margin-left: 24.17vw;
-        margin-bottom: -0.367vw;
-        padding-top: 0.7vw;
+        margin-bottom: -0.26vw;
+        padding-top: 0.61vw;
         opacity: 0.2;
         transition: opacity 0.4s;
     }
@@ -90,13 +90,9 @@
         font-size: 1.38vw;
         padding: 1.277vw 0;
         line-height: 1.389vw;
+        margin-left: 2.5vw;
     }
-    #inputMain{
-        margin-left: 1.9vw;
-    }
-    .iconContainer{
-        margin-right: 2vw;
-    }
+    
     .close{
         width: 1.594vw;
         height: 1.594vw;
