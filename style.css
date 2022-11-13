@@ -1,23 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-@media screen and (min-width: 1152px) {
-    *{
+@media screen and (min-width: 1024px) {
+    body{
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        list-style: none;
+        width: 100%;
+        margin-top: 7.813vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
     .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .blockContainer{
         width: 29.167vw;
-        text-align: center;
-        border: 0.086vw solid #c4c4c4;
-        border-radius: 0.867vw;
+        box-sizing: border-box;
+        max-height: 34.462vw;
+        border: 1px solid #C4C4C4;
+        border-radius: 0.8vw;
         display: flex;
         flex-direction: column;
     }
@@ -29,158 +27,205 @@
         border-top-right-radius: 0.8vw;
     }
     .headToDoList{
-        line-height: 2.951vw;
-        font-size: 2.431vw;
-        font-weight: 900;
         font-family: 'Roboto';
+        margin: auto;
+        line-height: 2.604vw;
+        height: 2.951vw;
+        font-size: 2.231vw;
+        font-weight: 900;
         margin-top: 1.128vw;
         color: black;
     }
     .downIcon{
-        margin-left: 21.459vw;
-        margin-bottom: -0.867vw;
-        padding-top: 0.959vw;
-        opacity: 0.2;
-        transition: opacity .3s;
-    }
-    .downIcon:hover{
-        opacity: 2;
+        padding: 0;
+        margin: 0;
+        height: 0.868vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 1.042vw;
     }
     .downIcon img{
         width: 2.17vw;
         height: 1.302vw;
+        margin-right: 2.604vw;
+        opacity: 0.2;
         cursor: pointer;
+    }
+    .downIcon img:hover{
+        opacity: 2.4;
+        color: #000000;
     }
     .upIcon{
         display: none;
-        margin-left: 24.17vw;
-        margin-bottom: -0.26vw;
-        padding-top: 0.61vw;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 0.868vw;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 1.042vw;
         opacity: 0.2;
-        transition: opacity 0.4s;
-    }
-    .upIcon:hover{
-        opacity: 2;
     }
     .upIcon img {
         width: 2.17vw;
         height: 1.302vw;
+        margin-right: 2.604vw;
+        opacity: 0.2;
         cursor: pointer;
+    }
+    .upIcon img:hover{
+        opacity: 2.4;
+        color: #000000;
     }
     .toDoList {
+        box-sizing: border-box;
         width: 24.826vw;
-        border: 0.087vw solid #c4c4c4;
-        border-radius: 0.868vw;
-        margin: 1.736vw auto;
         max-height: 17.361vw;
+        border: 1px solid #c4c4c4;
+        border-radius: 0.868vw;
+        margin: auto;
+        margin-top: 1.042vw;
         overflow: auto;
         overflow-x: hidden;
+        display: block;
     }
-    .listText{
+    .listMain{
+        padding: 0;
+        margin: 1.532vw 2.604vw 1.532vw 2.344vw;
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: row;
+        justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
     }
-    input{
-        border: none;
-        outline: none;
-        font-family: 'Roboto';
-        width: 16.493vw;
-        font-size: 1.38vw;
-        padding: 1.277vw 0;
-        line-height: 1.389vw;
-        margin-left: 2.5vw;
+    .listLi{
+        padding: 0;
+        margin: 1.532vw 2.604vw 1.532vw 2.344vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
-    
-    .close{
-        width: 1.594vw;
-        height: 1.594vw;
-        margin-top: 1vw;
-        margin-right: 0.69vw;
-        color: #c4c4c4;
-        cursor: pointer;
-        border-radius: 50%;
-        border: 0.2vw solid #c4c4c4;
-        opacity: .8;
-        transition: opacity .2s;
-    }
-    .close:hover{
-        opacity: 2;
-        background-color: #833AE0;
-    }
-    button{
-        width: 13.021vw;
-        height: 3.646vw;
-        background-color: #833AE0;
-        border-radius: 6.164vw;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    button:hover{
-        background-color: #681fc7;
-    }
-    .buttonMain{
+    .remove{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 1.736vw;
+        height: 1.736vw;
+        border: 1px solid #C4C4C4;
+        border-radius: 6.163vw;
         display: flex;
         justify-content: center;
-        margin-bottom: 1.2vw;
+        align-items: center;
     }
-    button .plus{
-        display: inline-block;
-        width: 3.646vw;
-        height: 3.646vw;
-        background: #9953F1;
-        border-radius: 6.164vw; 
-        color: #fff;
-        margin-left: -9.375vw;
-        font-size: 1.18vw;
-        transition: background-color 0.3s;
+    .removeInput{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 1.736vw;
+        height: 1.736vw;
+        border: 1px solid #C4C4C4;
+        border-radius: 6.163vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    button:hover .plus{
-        background-color: #9042f0;
+    .removeInput:hover{
+        background-color: #833AE0;
+        border: 1px solid #833AE0;
+        cursor: pointer;
     }
-    .plus p{
-        margin-top: 1.081vw;
-        font-size: 1.389vw;
+    .remove:hover{
+        background-color: #833AE0;
+        border: 1px solid #833AE0;
+        cursor: pointer;
     }
-    button .add{
-        width: 11.198vw;
-        height: 3.646vw;     
+    .todo{
+        width: 9.201vw;
+        height: 1.389vw;
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-size: 1.215vw;
         line-height: 1.389vw;
-        display: flex;
-        align-items: center;
-        text-align: center;  
-        color: #FFFFFF; 
-        margin-top: -3.646vw;
-        padding-left: 5.611vw;
-        font-family: 'Roboto';
+        color: #000000;
+        width: 90%;
+        border: none;
     }
-    #listMain{
-        display: flex;
-        flex-direction: column;
-        width: 19vw;
-    }
-    .list{
-        display: flex;
-    }
-    .list_item_words{
-        font-size: 1.18vw;
-    }
-    .list_item{
-        display: flex;
+    .toDoListInput{
+        width: 9.201vw;
+        height: 1.389vw;
         font-family: 'Roboto';
         font-style: normal;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1.382vw;
         font-weight: 400;
-        line-height: 1.39vw;
-        margin: 0.6vw 0;
+        font-size: 1.215vw;
+        line-height: 1.389vw;
+        color: #000000;
+        width: 90%;
+        border: none;
+    }
+    .toDoListInput:focus{
+        outline: none;
+    }
+    .todo:focus{
+        outline: none;
+    }
+    .action{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 13.021vw;
+        height: 3.646vw;
+        background: #833AE0;
+        border-radius: 6.163vw;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .action:hover{
+        background-color: #681fc7;
+    }
+    .buttonMain{
+        margin: 0;
+        padding: 0;
+        margin-top: 1.563vw;
+        margin-bottom: 1.649vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .plus{
+        width: 3.646vw;
+        height: 3.646vw;
+        background: #9953F1;
+        border-radius: 6.163vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.215vw;
+        line-height: 1.389vw;
+        color: #FFFFFF;
+    }
+    button:hover .plus{
+        background-color: #9042f0;
+    }
+    .add{
+        padding: 0;
+        font-size: 1.2vw;
+        margin: 0;
+        width: 71%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: -0.868vw;
+        font-family: 'Roboto';
+        color: white;
     }
 }
