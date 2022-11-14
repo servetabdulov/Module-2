@@ -45,16 +45,16 @@
         justify-content: flex-end;
         margin-top: 1.042vw;
     }
-    .downIcon img{
+    .downIcon .down{
         width: 2.17vw;
         height: 1.302vw;
         margin-right: 2.604vw;
-        opacity: 0.2;
+        opacity: 0.4;
         cursor: pointer;
     }
-    .downIcon img:hover{
-        opacity: 2.4;
-        color: #000000;
+    .down:hover{
+        opacity: 3;
+        color: black;
     }
     .upIcon{
         display: none;
@@ -65,18 +65,17 @@
         flex-direction: row;
         justify-content: flex-end;
         margin-top: 1.042vw;
-        opacity: 0.2;
     }
-    .upIcon img {
+    .upIcon .up {
         width: 2.17vw;
         height: 1.302vw;
         margin-right: 2.604vw;
-        opacity: 0.2;
+        opacity: 0.4;
         cursor: pointer;
     }
-    .upIcon img:hover{
-        opacity: 2.4;
-        color: #000000;
+    .up:hover{
+        opacity: 3;
+        color: black;
     }
     .toDoList {
         box-sizing: border-box;
