@@ -67,7 +67,7 @@ newInput();
 bttn.addEventListener('click',newInput);
 
 let sortArray = [];
-//sort
+//Sorting
 function sortArrayFunction() {
   let li = document.querySelectorAll('.listMain');
   sortArray = [];
@@ -84,10 +84,9 @@ function sortArrayFunction() {
   let downIcon = document.querySelector('.downIcon');
   downIcon.style.display='flex';
   upIcon.style.display='none';
-  // dragFunction();
 }
 
-//sort reverse
+//Sorting reverse
 function sortArrayReverseFunction() {
   upIcon.style.display='flex';
   downIcon.style.display='none';
@@ -97,14 +96,12 @@ function sortArrayReverseFunction() {
   sortArray.push(element.innerHTML);
 })
 sortArray.sort().reverse();
-
   for (let i = 0; i < li.length; i++) {
     li[i].innerHTML = sortArray[i];
   }
-  //dragFunction();
 }
-//drag and drop
 
+//drag and drop
 new Sortable(toDoList, {
   animation: 350
 });
