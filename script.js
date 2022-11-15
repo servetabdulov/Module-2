@@ -76,7 +76,6 @@ function sortArrayFunction() {
   })
 
   sortArray.sort();
-
   for (let i = 0; i < li.length; i++) {
     li[i].innerHTML = sortArray[i];
   }
